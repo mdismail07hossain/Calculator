@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "DS-DIGI";
+  src: url(font/DS-DIGI.TTF);
+  font-style: normal;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  background-color: #696867;
+  padding: 40px 30px 30px;
+  padding-right: 18px;
+  border-radius: 20px;
+  min-width: 300px;
+  min-height: 400px;
+  box-shadow: 25px 25px 25px rgba(20, 0, 65, 0.25),
+    10px 10px 70px rgba(1, 0, 65, 0.25),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.25),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.25);
+}
+.calculator {
+  display: grid;
+  gap: 10px;
+}
+.calculator .value {
+  grid-column: span 4;
+  height: 100px;
+  width: 380px;
+  background-color: #7cafac;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 36px;
+  padding: 10px;
+  margin-right: 10px;
+  text-align: right;
+  font-family: "DS-DIGI";
+}
+
+.calculator button {
+  border: none;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(180deg, #5a7681, #29488a);
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+    inset -8px 0 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75),
+    10px 20px 25px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.calculator button::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  right: 12px;
+  bottom: 14px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #606e8d, #4d4d4d);
+  box-shadow: -5px -5px -5px rgba(0, 0, 0, 0.1),
+    10px 5px 10px rgba(0, 0, 0, 0.15);
+  border-left: 1px solid rgba(0, 0, 0, 0.27);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.27);
+  border-top: 1px solid rgba(0, 0, 0, 0.6);
+}
+.calculator button i {
+  position: relative;
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 1.5em;
+}
+
+.calculator button:active {
+  filter: brightness(1.5);
+}
+
+.calculator button.clear {
+  background: rgb(255, 0, 106);
+}
+
+.calculator button.clear::before {
+  background: linear-gradient(90deg, #d20000, rgba(255, 255, 255, 0.36));
+  border-left: 1px solid rgba(255, 255, 255, 0.27);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.27);
+  border-top: 1px solid rgba(255, 255, 255, 0.27);
+}
+
+.calculator button.equal {
+  grid-row: span 2;
+  height: 180px;
+  background: #065c15;
+}
+.calculator button.equal::before {
+  background: linear-gradient(90deg, #3c743a, rgba(116, 245, 137, 0.36));
+  border-left: 1px solid rgba(255, 255, 255, 0.27);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.27);
+  border-top: 1px solid rgba(255, 255, 255, 0.27);
+}

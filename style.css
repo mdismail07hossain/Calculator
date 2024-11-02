@@ -10,12 +10,20 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #fafafa;
+  background: linear-gradient(to right, rgb(110, 197, 216), rgb(5, 127, 155));
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  padding: 20px;
+  font-size: 32px;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
 }
 .container {
   background-color: #696867;
